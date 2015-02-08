@@ -35,6 +35,13 @@ public class Year2Science {
         try{
          Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
          Statement stmt = conn.createStatement();
+         
+         String SQL = "SELECT * from STUDENTS";
+         ResultSet rs = stmt.executeQuery(SQL);
+         
+         while(rs.next()){
+             int stuID
+         }
         }
         catch(SQLException err){
             System.out.println(err.getMessage());
