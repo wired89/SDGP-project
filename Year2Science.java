@@ -40,13 +40,19 @@ public class Year2Science {
          ResultSet rs = stmt.executeQuery(SQL);
          
          while(rs.next()){
-             int stuID
+             int stuID = rs.getInt("id");
+             String firstName = rs.getString("firstName");
+             String lastName = rs.getString("lastName");
+             String password = rs.getString("password");
+             
+             String print = stuID + " " + firstName + " " + lastName + " " + password;
+             System.out.println(print);
          }
         }
         catch(SQLException err){
             System.out.println(err.getMessage());
         }
-   
+        System.out.println("GoodBye!");
    
    
     }
