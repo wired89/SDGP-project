@@ -10,7 +10,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Properties;
+
 
 /**
  *
@@ -36,8 +36,9 @@ public class Year2Science {
          Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
          Statement stmt = conn.createStatement();
          
-         String SQL = "SELECT * from STUDENTS";
+         String SQL = "SELECT * from APP.STUDENTS";
          ResultSet rs = stmt.executeQuery(SQL);
+         
          
          while(rs.next()){
              int stuID = rs.getInt("id");
