@@ -21,18 +21,28 @@ public class Year2Science {
     /**
      * @param args the command line arguments
      */
-   //static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-   static final String DB_URL = "jdbc:derby://localhost:1527/Proto";
-
-   //  Database credentials
-   static final String USER = "userTest";
-   static final String PASS = "usertest";
+   
     
     
     public static void main(String[] args) {
         // TODO code application logic here
         
-        try{
+       
+   
+   
+    }
+    
+   class con {
+       
+       //static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
+   static final String DB_URL = "jdbc:derby://localhost:1527/Proto";
+
+   //  Database credentials
+   static final String USER = "userTest";
+   static final String PASS = "usertest";
+   
+       public con(){
+            try{
          Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
          Statement stmt = conn.createStatement();
          
@@ -54,11 +64,8 @@ public class Year2Science {
             System.out.println(err.getMessage());
         }
         System.out.println("GoodBye!");
-   
-   
-    }
-    
-   
+       }
+   }
 
     
 
